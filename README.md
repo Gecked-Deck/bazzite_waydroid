@@ -56,14 +56,16 @@ and then paste the following:
 
 sleep 3
 waydroid session stop
-WAYLAND_DISPLAY=wayland-1 waydroid show-full-ui```
+WAYLAND_DISPLAY=wayland-1 waydroid show-full-ui
+```
 Then press ctrl+s and ctrl+x to save and exit.
 
 Next, run this in your terminal:
 `sudo nano ~/.config/weston-waydroid.ini`
 
 Then paste:
-```[autolaunch]
+```
+[autolaunch]
 path=/home/USERNAME/.local/this-is-executable.sh
 
 [output]
@@ -76,7 +78,8 @@ mode=1920x1080
 
 [shell]
 background-color=0xFF000000
-panel-position=none```
+panel-position=none
+```
 
 Before saving, change USERNAME to your username, and both lines that say mode=1920x1080 to be your desired resolution instead (e.g. mode=1280x800)
 
@@ -86,7 +89,8 @@ Finally, run this in your terminal:
 `sudo nano ~/.local/share/applications/weston-waydroid.desktop`
 
 Then paste the following:
-```[Desktop Entry]
+```
+[Desktop Entry]
 Version=0.1
 Type=Application
 Name=Weston
@@ -94,7 +98,8 @@ Comment=Launch Waydroid nested in Weston
 Icon=applications-other
 Exec=/home/USERNAME/weston -c .config/weston-waydroid.ini
 Actions=
-Categories=Utility;```
+Categories=Utility;
+```
 Before saving, change USERNAME to your username.
 
 Then press ctrl+s and ctrl+x to save and exit.
