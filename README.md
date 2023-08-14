@@ -96,7 +96,7 @@ Type=Application
 Name=Weston
 Comment=Launch Waydroid nested in Weston
 Icon=applications-other
-Exec=/home/USERNAME/weston -c .config/weston-waydroid.ini
+Exec=weston -c /home/USERNAME/.config/weston-waydroid.ini
 Actions=
 Categories=Utility;
 ```
