@@ -52,7 +52,8 @@ Weston is a Wayland compositor, which we'll use to get Waydroid working properly
 First, in your terminal enter:
 `nano ~/.local/this-is-executable.sh`
 and then paste the following:
-```#!/bin/bash
+```
+#!/bin/bash
 
 sleep 3
 waydroid session stop
