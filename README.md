@@ -1,6 +1,6 @@
 # How to install Waydroid on Bazzite (Steam Deck and Desktop edition)
 
-** NOTE: FOR THE STEAM DECK I HIGHLY RECOMMEND USING AN EXTERNAL DESK SETUP TO GET THIS WORKING, AT MINIMUM A KEYBOARD AND MOUSE IS RECOMMENDED.**
+**NOTE: FOR THE STEAM DECK I HIGHLY RECOMMEND USING AN EXTERNAL DESK SETUP TO GET THIS WORKING, AT MINIMUM A KEYBOARD AND MOUSE IS RECOMMENDED.**
 
 **This guide also has a lot of copy pasting to terminal. To copy from terminal, you use ctrl+shift+c, to paste you use ctrl+shift+v**
 
