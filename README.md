@@ -17,6 +17,7 @@ Once rebooted, run this command `sudo systemctl enable --now waydroid-container`
 
 ## 2. Initializing Waydroid
 Initializing Waydroid just means installing android. To do so, run this command:
+
 `sudo waydroid init -c https://ota.waydro.id/system -v https://ota.waydro.id/vendor -s GAPPS -f`
 
 This installs android along with the google play store.
@@ -26,9 +27,13 @@ You can now test waydroid for the first time! Simply open Waydroid from your lau
 
 ## 4. Google Play Certification
 With waydroid open, open a terminal window and run
+
 `sudo waydroid shell`
+
 Once you've entered the waydroid shell (It should just say `:/ #` before your text cursor), enter the command:
+
 `ANDROID_RUNTIME_ROOT=/apex/com.android.runtime ANDROID_DATA=/data ANDROID_TZDATA_ROOT=/apex/com.android.tzdata ANDROID_I18N_ROOT=/apex/com.android.i18n sqlite3 /data/data/com.google.android.gsf/databases/gservices.db "select * from main where name = \"android_id\";"`
+
 When you run this command, your terminal should output `android_id|` and some numbers. Copy the numbers, then visit [this website](<https://www.google.com/android/uncertified>).
 
 Paste the number in the box that says "Google Services Framework ID", answer the captcha (If one is present), then simply hit register. You should see a popup saying "Device Registered" in the bottom left.
@@ -38,8 +43,10 @@ You can now type `exit` to leave the Waydroid shell.
 ## 5. Changing the resolution on Waydroid
 **Note:** Changing DPI will be done on a later step. This is more relevant on the Steam Deck, just hold tight.
 
-This is pretty easy! Just open up your terminal and enter the following commands. Just change the number at the end to fit whatever display resolution you are using, just as an example I'll show you the commands for 1280x800:\n
-`waydroid prop set persist.waydroid.width 1280`\n
+This is pretty easy! Just open up your terminal and enter the following commands. Just change the number at the end to fit whatever display resolution you are using, just as an example I'll show you the commands for 1280x800:
+
+`waydroid prop set persist.waydroid.width 1280`
+
 `waydroid prop set persist.waydroid.height 800`
 
 We can now exit waydroid by running `waydroid session stop`
@@ -50,7 +57,9 @@ Congrats! If you're running on Bazzite Desktop you can stop here, unless you wan
 Weston is a Wayland compositor, which we'll use to get Waydroid working properly in game mode.
 
 First, in your terminal enter:
+
 `nano ~/.local/this-is-executable.sh`
+
 and then paste the following:
 ```
 #!/bin/bash
@@ -62,6 +71,7 @@ WAYLAND_DISPLAY=wayland-1 waydroid show-full-ui
 Then press ctrl+s and ctrl+x to save and exit.
 
 Next, run this in your terminal:
+
 `sudo nano ~/.config/weston-waydroid.ini`
 
 Then paste:
@@ -87,6 +97,7 @@ Before saving, change USERNAME to your username, and both lines that say mode=19
 Then press ctrl+s and ctrl+x to save and exit.
 
 Finally, run this in your terminal:
+
 `sudo nano ~/.local/share/applications/weston-waydroid.desktop`
 
 Then paste the following:
