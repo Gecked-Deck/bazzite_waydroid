@@ -68,7 +68,7 @@ We can now exit waydroid by running
 ```
 waydroid session stop
 ```
-Congrats! If you're running on Bazzite Desktop you can stop here, unless you want ARM emulation in which case skip to **Step 7** for those instructions. The following commands up until step X are purely for the Steam Deck.
+Congrats! If you're running on Bazzite Desktop you can stop here, unless you want ARM emulation in which case skip to **Step 7** for those instructions. The following commands up until step 7 are purely for the Steam Deck.
 
 ## 6. Configuring Weston
 Weston is a Wayland compositor, which we'll use to get Waydroid working properly in game mode.
