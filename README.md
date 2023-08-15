@@ -127,11 +127,17 @@ Congrats! You can now add the weston app to steam (Press add a non-steam app, an
 You should now have successfully installed Waydroid, but you may still want to run ARM apps.
 
 To do so, run the following commands:
+
 `git clone https://github.com/casualsnek/waydroid_script`
+
 `cd waydroid_script`
+
 `python -m venv venv`
+
 `source venv/bin/activate`
+
 `sudo pip install -r requirements.txt`
+
 `sudo python main.py`
 
 Now, press enter to select Android 11, press enter to select Install, then press the up and down arrow keys and the space bar to select the following: 
@@ -147,12 +153,17 @@ Once they're installed, you're done! You can now use ARM apps! Just bare in mind
 To edit the waydroid config file type `sudo nano /var/lib/waydroid/waydroid_base.prop`
 
 To adjust DPI, add this line on the end:
+
 `ro.sf.lcd_density=100`
+
 for the Steam Deck, change the number to 215
 
 If on AMD or Intel GPU's (including the steam deck), change the line that says:
+
 `ro.hardware.gralloc=gbm`
+
 to instead be:
+
 `ro.hardware.gralloc=minigbm_gbm_mesa`
 
 That's it, you're done!
