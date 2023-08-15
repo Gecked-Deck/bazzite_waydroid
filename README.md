@@ -38,8 +38,8 @@ You can now type `exit` to leave the Waydroid shell.
 ## 5. Changing the resolution on Waydroid
 **Note:** Changing DPI will be done on a later step. This is more relevant on the Steam Deck, just hold tight.
 
-This is pretty easy! Just open up your terminal and enter the following commands. Just change the number at the end to fit whatever display resolution you are using, just as an example I'll show you the commands for 1280x800:
-`waydroid prop set persist.waydroid.width 1280`
+This is pretty easy! Just open up your terminal and enter the following commands. Just change the number at the end to fit whatever display resolution you are using, just as an example I'll show you the commands for 1280x800:\n
+`waydroid prop set persist.waydroid.width 1280`\n
 `waydroid prop set persist.waydroid.height 800`
 
 We can now exit waydroid by running `waydroid session stop`
