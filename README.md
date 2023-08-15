@@ -7,13 +7,27 @@
 ## 1. Disabling SELinux and enabling the Waydroid container
 SELinux is a kernel module used by Fedora (and thus Bazzite) to increase security on a Linux system. Right now there is an issue which means Waydroid cannot be used alongside SELinux.
 
-To disable SELinux, type `sudo nano /etc/selinux/config` into your terminal. Then, change the line that says `SELINUX=enforcing` to instead be `SELINUX=disabled`.
+To disable SELinux, run:
+
+`sudo nano /etc/selinux/config` into your terminal.
+
+Then, change the line that says:
+
+`SELINUX=enforcing`
+
+to instead be
+
+`SELINUX=disabled`.
 
 Then press ctrl+s, then ctrl+x to save and quit.
 
 After this simply reboot.
 
-Once rebooted, run this command `sudo systemctl enable --now waydroid-container` after running the waydroid container will start and is set to run on any subsequent startup.
+Once rebooted, run this command:
+
+`sudo systemctl enable --now waydroid-container`
+
+after running that the waydroid container will start and is set to run on any subsequent startup.
 
 ## 2. Initializing Waydroid
 Initializing Waydroid just means installing android. To do so, run this command:
@@ -49,7 +63,9 @@ This is pretty easy! Just open up your terminal and enter the following commands
 
 `waydroid prop set persist.waydroid.height 800`
 
-We can now exit waydroid by running `waydroid session stop`
+We can now exit waydroid by running 
+
+`waydroid session stop`
 
 Congrats! If you're running on Bazzite Desktop you can stop here, unless you want ARM emulation in which case skip to **Step 7** for those instructions. The following commands up until step X are purely for the Steam Deck.
 
@@ -117,8 +133,11 @@ Before saving, change USERNAME to your username.
 Then press ctrl+s and ctrl+x to save and exit.
 
 Then, run:
+
 `sudo chmod +x ~/.local/share/applications/weston-waydroid.desktop`
+
 and
+
 `sudo chmod +x ~/.local/this-is-executable.sh`
 
 Congrats! You can now add the weston app to steam (Press add a non-steam app, and it should be in the initial list)! Make sure to change the resolution for weston in game mode to match your display's resolution. It **should** do this by default however I've had issues with it doing so.
@@ -150,7 +169,7 @@ Once those are selected, press enter to begin the install. While installing, mak
 Once they're installed, you're done! You can now use ARM apps! Just bare in mind this is emulation, so you're not guaranteed great performance. If you've got a fairly modern CPU it should be good though.
 
 ## 8. Waydroid config file (PPI, Fixing GPU stuff etc.)
-To edit the waydroid config file use the command:
+To edit the waydroid config file run:
 
 `sudo nano /var/lib/waydroid/waydroid_base.prop`
 
