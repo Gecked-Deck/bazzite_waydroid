@@ -143,7 +143,7 @@ Once those are selected, press enter to begin the install. While installing, mak
 
 Once they're installed, you're done! You can now use ARM apps! Just bare in mind this is emulation, so you're not guaranteed great performance. If you've got a fairly modern CPU it should be good though.
 
-## 8. Waydroid config file (PPI, Fixing GPU stuf etc.)
+## 8. Waydroid config file (PPI, Fixing GPU stuff etc.)
 To edit the waydroid config file type `sudo nano /var/lib/waydroid/waydroid_base.prop`
 
 To adjust DPI, add this line on the end:
