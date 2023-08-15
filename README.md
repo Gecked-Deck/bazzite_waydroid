@@ -9,7 +9,7 @@ SELinux is a kernel module used by Fedora (and thus Bazzite) to increase securit
 
 To disable SELinux, run:
 
-`sudo nano /etc/selinux/config` into your terminal.
+`sudo nano /etc/selinux/config`
 
 Then, change the line that says:
 
