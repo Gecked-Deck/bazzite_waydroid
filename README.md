@@ -107,6 +107,7 @@ mode=1920x1080
 [shell]
 background-color=0xFF000000
 panel-position=none
+locking=false
 ```
 
 Before saving, change USERNAME to your username, and both lines that say mode=1920x1080 to be your desired resolution instead (e.g. mode=1280x800)
